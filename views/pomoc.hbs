@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>Podaj typ/specyfikę aplikacji Node.js. Jakie są wymagania, aby móc połączyć się z Bazą danych lub wysyłać wiadomości pocztą e-mail?
+            <p>
+                NodeJs może komunikować się z różnymi bazami danych relacyjnymi jak i nie relacyjnymi np. (MySQL, MongoDB). Poprzez dostępne frameworki pozwala na łatwą integrację z tymi bazami.
+
+                Do najpopularniejszych sposobów komunikacji z bazami danych w nodeJS są np. Biblioteki Sequelize czy bezpośrednie połączenia z sterownikami dla baz SQL czy NonSQL
+            </p>
+            <table>
+                <tr>
+                    <th>Wymagania</th>
+                </tr>
+                <tr>
+                    <th>Środowisko NodeJs</th>
+                </tr>
+                <tr>
+                    <th>Odpowiednia paczka npm w zależności od wybranej bazy np. mysql2, monogoose</th>
+                </tr>
+                <tr>
+                    <th>
+                        Konfiguracja połączenia z adresem, hasłem i resztą danych potrzebnych do połączenia się z bazą
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Odpowiednie zarządzanie połączeniami np. przez pulę połączeń
+                    </th>
+                </tr>
+            </table>
+            <img src="../public/img/wymagania.jpg" alt="wymagania" height="200px" width="auto">
+        </li>
+
+        <li>Opisz dostępne metody dla systemu pocztowego w Node.js.
+            <p>
+                w NodeJs można też wysyłać maile poprzez zastosowanie bibliotek i API w zależności od wymagań, można wybrać rozwiązania lokalne np. SMTP lub z usług wysyłki oferowanych przez dostawców jak SendGid czy Mailgun
+            </p>
+            <table>
+                <tr>
+                    <th>Do najpopularniejszych bibliotek należą</th>
+                </tr>
+                <tr>
+                    <th>Nodemailer, umożliwia łatwą integrację z SMTP</th>
+                </tr>
+                <tr>
+                    <th>Emailjs, również umożliwia użycie SMTP jak i różne api mailowe</th>
+                </tr>
+                <tr>
+                    <th>
+                        SMTP transport, umożliwia wysyłanie przez serwery Gmail jak i własne serwery czy transport SMTP
+                    </th>
+                </tr>
+            </table>
+            <img src="../public/img/mail.jpg" alt="wymagania" height="200px" width="auto">
+        </li>
+
+        <li>Porównaj metody i podaj ich wady i zalety.
+            <p>
+                w NodeJs można też wysyłać maile poprzez zastosowanie bibliotek i API w zależności od wymagań, można wybrać rozwiązania lokalne np. SMTP lub z usług wysyłki oferowanych przez dostawców jak SendGid czy Mailgun
+            </p>
+            <table>
+                <tr>
+                    <th>Nodemailer</th>
+                </tr>
+                <tr>
+                    <th>Wady</th>
+                    <th>Zalety</th>
+                </tr>
+                <tr>
+                    <th>Potrzebne są dane dostępowe do serwera SMTP</th>
+                    <th>Bardzo popularna i dobrze udokumentowana biblioteka.</th>
+                </tr>
+                <tr>
+                    <th>W przypadku dużej liczby e-maili może wymagać ograniczeń na poziomie dostawcy SMTP.</th>
+                    <th>Obsługuje załączniki, HTML, szyfrowanie SSL/TLS.</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Możliwość wysyłania e-maili zarówno lokalnie, jak i przez zewnętrzne API.</th>
+                </tr>
+            </table>
+<br>
+            <table>
+                <tr>
+                    <th>SendGrid API</th>
+                </tr>
+                <tr>
+                    <th>Wady</th>
+                    <th>Zalety</th>
+                </tr>
+                <tr>
+                    <th>Potrzebny jest klucz API.</th>
+                    <th>Wysoka niezawodność, dobra skalowalność.</th>
+                </tr>
+                <tr>
+                    <th>Koszty mogą wzrosnąć przy dużym natężeniu wysyłania e-maili.</th>
+                    <th>Obsługuje wysyłanie e-maili z dużymi załącznikami, obsługę wielu skrzynek nadawczych, analitykę.</th>
+                </tr>
+            </table>
+<br>
+            <table>
+                <tr>
+                    <th>Amazon SES</th>
+                </tr>
+                <tr>
+                    <th>Wady</th>
+                    <th>Zalety</th>
+                </tr>
+                <tr>
+                    <th>Może wymagać weryfikacji konta i rozwiązywania problemów związanych z reputacją domeny.</th>
+                    <th>Łatwa integracja z AWS.</th>
+                </tr>
+                <tr>
+                    <th>Wysoka skalowalność, niskie koszty przy dużych wolumenach.</th>
+                    <th>Obsługuje wysyłanie e-maili z dużymi załącznikami, obsługę wielu skrzynek nadawczych, analitykę.</th>
+                </tr>
+            </table>
+        </li>
+    </ol>
+</body>
+</html>

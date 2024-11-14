@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>TYTUŁ</title>
+  <LINK HREF="http://gtkweb.gplweb.pl/gtkDecorator.css" type="text/css" rel="stylesheet" />
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<ARTICLE class="gtkWindow NOinnSpace">
+  <header class="gtkHeaderBar ltr">
+	<DIV class="putLeft">
+		<A href="#gtkButton" class="gtkBtn" title="Powrót">⟨⟨</A>
+		<A href="#gtkButton" class="gtkButton gtkSubmit" title="Wyślij">Send</A>
+		<div class="btnsCombine">
+		  <a href="#prev" class="gtkBtn btnPrev" title="btnPrev"><span></span></a
+		  ><a href="#next" class="gtkBtn btnNext" title="btnNext"><span></span></a>
+		</div>
+		<A href="pomoc" class="gtkButton" title="Przycisk">Pomoc</A>
+	</DIV>
+	<DIV class="putRight">
+		<A href="#gtkButton" class="gtkFlatBtn" title="Zamknij">⨯</A>
+	</DIV>
+	<DIV>
+		<h1>{{ pTitle }}</h1>
+		<p>
+			{{# if pIfs}}
+				Warsztat
+			{{ else }}
+				Ćwiczenie
+			{{/if }}: renderowanie dokumentu przez silnik szablonowy </p>
+	</DIV>
+  </h
+	  header>
+	{{> a_side }}
+	<div class="innSpace">
+		<p>{{ pBody }}</p>
+		<p>{{# each pTab }} {{this}} {{/each }}</p>
+		{{{ pLorem }}}
+		{{# each pObs as |val key| }}
+			{{key}}=>{{val}}
+		{{/each}}
+		<p>Lorem ipsum dolor sit 9dhsfhds8fhds8fhs8dhfsd8hf8</p>
+	</div>
+</ARTICLE>
+</body>
+</html>
